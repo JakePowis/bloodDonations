@@ -43,6 +43,10 @@ This mobile web app will allow donors to view information about available dates 
 8. Recaptcha
 9. Validations
 
+Example: Adding Appointments to the system (cordinator access only)
+![](https://i.ibb.co/9tZd6BD/zmmobile3.png)
+
+Example: Editing your user profile
 ![dashboard](https://i.ibb.co/4YFwMtc/zmmolbime2.png)
 
 
