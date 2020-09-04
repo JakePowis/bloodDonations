@@ -28,29 +28,29 @@ import i18next from 'i18next';
 function App() {
   const [userClaims, setUserClaims] = useState(localStorage.getItem('userLevel'))
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('userid'))
-  
+
   let languageSelected = localStorage.getItem('i18nextLng');
 
   return (
-   
+
     <Router>
       <Switch>
-        <UserRoute path='/dashboard' component={Dashboard} isAuthenticated={isAuthenticated} userLevel={userClaims}/>
-        <UserRoute path='/prevapp' component={PreviousAppointments} isAuthenticated={isAuthenticated} userLevel={userClaims}/>
-        <UserRoute path='/verfication' component={AppointmentVerification} isAuthenticated={isAuthenticated} userLevel={userClaims}/>
-        <UserRoute path='/user' component={User} isAuthenticated={isAuthenticated} userLevel={userClaims}/>
-        <UserRoute path='/questions' component={Questions} isAuthenticated={isAuthenticated} userLevel={userClaims}/>
+        <UserRoute path='/dashboard' component={Dashboard} isAuthenticated={isAuthenticated} userLevel={userClaims} />
+        <UserRoute path='/prevapp' component={PreviousAppointments} isAuthenticated={isAuthenticated} userLevel={userClaims} />
+        <UserRoute path='/verfication' component={AppointmentVerification} isAuthenticated={isAuthenticated} userLevel={userClaims} />
+        <UserRoute path='/user' component={User} isAuthenticated={isAuthenticated} userLevel={userClaims} />
+        <UserRoute path='/questions' component={Questions} isAuthenticated={isAuthenticated} userLevel={userClaims} />
 
-        <CordRoute path='/add' component={AddAppointment} isAuthenticated={isAuthenticated} userLevel={userClaims}/>
-        <CordRoute path='/emergency' component={EmergencyDonations} isAuthenticated={isAuthenticated} userLevel={userClaims}/>
-        <CordRoute path='/edit-delete' component={DeleteEditAppointments} isAuthenticated={isAuthenticated} userLevel={userClaims}/>
+        <CordRoute path='/add' component={AddAppointment} isAuthenticated={isAuthenticated} userLevel={userClaims} />
+        <CordRoute path='/emergency' component={EmergencyDonations} isAuthenticated={isAuthenticated} userLevel={userClaims} />
+        <CordRoute path='/edit-delete' component={DeleteEditAppointments} isAuthenticated={isAuthenticated} userLevel={userClaims} />
 
-        <AdminRoute path='/admin' component={Admin} isAuthenticated={isAuthenticated} userLevel={userClaims}/>
+        <AdminRoute path='/admin' component={Admin} isAuthenticated={isAuthenticated} userLevel={userClaims} />
 
         <PublicRoute path='/not-found' component={NotFound} />
         <PublicRoute path='/login' languageSelected={languageSelected} component={Login} />
-        <PublicRoute path='/register' languageSelected={languageSelected} component={Register} /> 
-        <PublicRoute path='/passwordreset' languageSelected={languageSelected} component={ForgotPassword} /> 
+        <PublicRoute path='/register' languageSelected={languageSelected} component={Register} />
+        <PublicRoute path='/passwordreset' languageSelected={languageSelected} component={ForgotPassword} />
 
         <Redirect from='/' exact to="/login" />
         <Redirect to='/not-found' />

@@ -1,15 +1,15 @@
 import * as firebase from 'firebase'
 
 
-const firebaseConfig = {
-    apiKey: "AIzaSyC6EDL8gMkZc3GGzGveMqWe5zvAr5DNiL4",
-    authDomain: "blood-components.firebaseapp.com",
-    databaseURL: "https://blood-components.firebaseio.com",
-    projectId: "blood-components",
-    storageBucket: "blood-components.appspot.com",
-    messagingSenderId: "388223113819",
-    appId: "1:388223113819:web:1273570a12add0fedafd7e",
-    measurementId: "G-K6NM078FWD"
+var firebaseConfig = {
+    apiKey: "AIzaSyDks39J-fsAobSwBLGx4pCyuSxPAWhTaH4",
+    authDomain: "blooddonations-jp.firebaseapp.com",
+    databaseURL: "https://blooddonations-jp.firebaseio.com",
+    projectId: "blooddonations-jp",
+    storageBucket: "blooddonations-jp.appspot.com",
+    messagingSenderId: "78056183240",
+    appId: "1:78056183240:web:9d5979f2449ab3ac455cfd",
+    measurementId: "G-1MFBZJ1CCB"
 };
 
 // Initialize Firebase

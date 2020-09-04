@@ -16,13 +16,13 @@ const LoginForm = () => {
   const backArrow = "/img/back-button-white.svg"
   const history = useHistory();
   const logo = "/img/Logo.png";
-  let [userData, setUserData] = useState([])
+  let [userData, setUserData] = useState({ email: "test@test.com", password: "123456" })
   let [error, setError] = useState([])
 
 
-/////////
-const { t } = useTranslation();
-//////////
+  /////////
+  const { t } = useTranslation();
+  //////////
 
   //Handle change of login form fields 
 
@@ -48,9 +48,9 @@ const { t } = useTranslation();
           });
         }
       });
-      
+
       //Redirect to Dashboard after login if the user exists
-      window.location.href= '/dashboard';
+      window.location.href = '/dashboard';
     }).catch(function (error) {
       // Handle Errors here.
       var errorMessage = error.message;
@@ -80,6 +80,7 @@ const { t } = useTranslation();
             type="email"
             name="email"
             placeholder={t('loginForm.email')}
+            value={userData.email}
             required
           ></input>
 
@@ -92,6 +93,7 @@ const { t } = useTranslation();
             type="password"
             name="password"
             placeholder={t('loginForm.password')}
+            value={userData.password}
             required
           ></input>
         </div>
@@ -112,19 +114,19 @@ const { t } = useTranslation();
           <Link to='/passwordreset' style={{ textDecoration: 'none' }}>
             <p>
               {t('loginForm.forgotPassword')}
-        </p>
+            </p>
           </Link>
         </div>
         <div class="registerFooter">
           <p id="footertext">{t('loginForm.notSignedUp')}</p>
 
 
-            <Link  to='/register' style={{ textDecoration: 'none' }}>
-          <div className="comeSaveLivesButton">
-            <img src={backArrow} id ="backArrowLogin"/>
-            <span id ="comeSaveLivesSpan">{t('loginForm.comeSaveLives')}</span>
-          </div>
-            </Link>
+          <Link to='/register' style={{ textDecoration: 'none' }}>
+            <div className="comeSaveLivesButton">
+              <img src={backArrow} id="backArrowLogin" />
+              <span id="comeSaveLivesSpan">{t('loginForm.comeSaveLives')}</span>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
